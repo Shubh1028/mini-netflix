@@ -10,9 +10,9 @@ const useMovies = (query) => {
       try {
         setLoading(true);
         setError(null);
-        //I have stored api key in the env file for security purpose
+        //I have passed the API key directly in the link since you will be testing this code locally. Normally, I include this kind of confidential data in an environment file and access it from there.
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&${query}`
+          `http://www.omdbapi.com/?apikey=9bc02f12&${query}`
         );
         const result = await response.json();
 
