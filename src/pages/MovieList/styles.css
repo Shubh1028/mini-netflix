@@ -1,0 +1,25 @@
+.container{
+    color: var(--primary-color);
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.movie-list-wrapper {
+    display: grid;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr); 
+}
+
+@media (max-width: 1024px) { 
+    .movie-list-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+@media (max-width: 768px) { 
+    .movie-list-wrapper {
+        grid-template-columns: 1fr; 
+    }
+}
